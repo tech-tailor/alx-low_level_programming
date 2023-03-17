@@ -3,11 +3,11 @@
 #include <time.h>
 
 /**
- *  Main: this code prints a random number
+ * main - this code generates  a random number
  *
- *  Description:  It then print last digit of the random number
+ * Description: then print last digit of the random number
  *
- *  Return: Always return 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
