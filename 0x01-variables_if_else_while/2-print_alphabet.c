@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - print the lower case letters of the alphabet
+ * main - print the lower letters of the alphabet
  *
- * Description: print the lower case letters of the alphabet
- * 
+ * Description: print the lower letters of the alphabet
+ *
  * Return: Always 0 (Success)
  */
 
