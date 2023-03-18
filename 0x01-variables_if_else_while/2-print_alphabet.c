@@ -4,7 +4,7 @@
  * main - print the lower case letters of the alphabet
  *
  * Description: print the lower case letters of the alphabet
- *
+ * 
  * Return: Always 0 (Success)
  */
 
@@ -17,7 +17,7 @@ int main(void)
 		putchar(i);
 		i++;
 	}
-	putchar(9);
+	putchar(10);
 
 	return (0);
 }
