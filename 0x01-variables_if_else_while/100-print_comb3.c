@@ -3,7 +3,7 @@
 /**
  * main - print double digit combination
  *
- * Description: print double digit combination separated by comma and in ascending order
+ * Description: print double digit combo separated by comma
  *
  * Return: Always 0 (Success)
  */
