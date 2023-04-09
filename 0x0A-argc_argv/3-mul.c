@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 /**
-* * main - multiply two numbers
-* *
-* *@argc: - argument count
-* *
-* *@argv: - argument vector
-* *
-* * Return: succes
-* */
+ * * main -  print its name
+ * *
+ * *@argc: - print name
+ * *
+ * *@argv: - print name
+ * *
+ * * Return: succes
+ */
 
 int main(int argc, char *argv[])
 {
@@ -23,10 +23,10 @@ return (1);
 }
 else
 {
-num1 = atoi (argv[1]);
-num2 = atoi (argv[2]);
-result = num1 * num2;
-printf("%d\n" , result);
+num1 = atoi(argv[1]);
+num2 = atoi(argv[2]);
+result = num1 *num2;
+printf("%d\n", result);
 }
 
 return (0);
