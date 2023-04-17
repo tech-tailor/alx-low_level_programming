@@ -1,12 +1,8 @@
 #include <stdio.h>
-
 /**
- * main: print source code file
+ * main - check the code for Alx School students.
  *
- * descripton: prints code file
- *
- * Return: success
- *
+ * Return: Always 0.
  */
 
 int main(void)
