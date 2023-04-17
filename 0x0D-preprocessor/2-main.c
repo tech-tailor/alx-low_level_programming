@@ -1,14 +1,15 @@
 #include <stdio.h>
 
 /**
- * main : print source code file
+ * main: print source code file
  *
- * descripton: prints
+ * descripton: prints code file
  *
  * Return: success
+ *
  */
 
-int main()
+int main(void)
 {
 	printf("%s\n", __FILE__);
 
