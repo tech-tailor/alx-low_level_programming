@@ -1,4 +1,14 @@
-#include <stdio.h>
+#ifndef DOG_H
+#define DOG_H
+
+/**
+ * struct dog - dog structure
+ * @name: dog name
+ * @age: the dog age
+ * @owner: dog caretaker
+ *
+ * Return: 0
+ */
 
 struct dog
 	{
@@ -6,3 +16,4 @@ struct dog
 	float age;
 	char *owner;
 	};
+#endif
