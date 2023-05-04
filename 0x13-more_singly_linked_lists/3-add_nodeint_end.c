@@ -19,6 +19,13 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	newNode->n = n;
 	newNode->next = NULL;
 
+	if (newNode == NULL)
+	{
+		printf("Error\n");
+		return(NULL);
+	}
+	else
+	{	
 	if (*head == NULL)
 		*head = newNode;
 
@@ -31,6 +38,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 			lastNode = lastNode->next;
 		}
 		lastNode->next = newNode;
+	}
 	}
 	return (newNode);
 
