@@ -1,50 +1,61 @@
-#include "main.h"
-
-int _pow(int a, int x);
+#include "holberton.h"
 
 /**
- * binary_to_uint -  converts a binary number to an unsigned int
- * @b: the string with the binary representation
- *
- * Return: The value
+ * _strlen - returns length of string (modified)
+ * @s: string (const)
+ * Return: length of string
  */
-unsigned int binary_to_uint(const char *b)
+
+int _strlen(const char *s)
 {
-unsigned int ret = 0, len = 0, exp = 0;
+	int len = 0;
 
-	if (b == NULL)
-		return (0);
-
-	while (*(b + len) != '\0')
+	while (s[len] != '\0')
 	{
-		if (*(b + len) < '0' || *(b + len) > '1')
-			return (0);
 		len++;
 	}
-	while (len > 0)
-	{
-		len--;
-		ret =  ret + (_pow(2, exp) *  (*(b + len) - 48));
-		exp++;
-	}
-	return (ret);
+
+	return (len);
 }
 
 /**
- * _pow -  Power of a num to exponent
- * @a:  base
- * @x: exponent
- * Return: The value
+ * power - exponents
+ * @base: base
+ * @exp: exponent
+ * Return: result (int)
  */
-int _pow(int a, int x)
+
+int power(int base, int exp)
 {
-int k, r = a;
+	int i, num;
 
-	if (x == 0)
-		return (1);
+	num = 1;
+	for (i = 0; i < exp; ++i)
+		num *= base;
 
-	for (k = 1; k < x; i++)
-		r = r * a;
+	return (num);
+}
 
-	return (r);
+/**
+ * binary_to_uint - converts a binary number to an unsigned int
+ * @b: binary
+ * Return: unsigned int
+ */
+
+unsigned int binary_to_uint(const char *b)
+{
+	unsigned int sum;
+	int length, i;
+
+	sum = 0;
+	if (b == NULL)
+		return (sum);
+	length = _strlen(b);
+	for (i = length - 1; i >= 0; i--)
+	{
+		if (b[i] != '0' && b[i] != '1')
+			return (0);
+		sum += (b[i] - '0') * power(2, length - i - 1);
+	}
+	return (sum);
 }
