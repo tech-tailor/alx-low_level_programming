@@ -1,47 +1,50 @@
 #include "main.h"
 
-/**
- *binary_to_uint- to convert decimal to binary
- *
- *@b: pointer that takes binary num
- *
- *Return: return int
- */
+int _pow(int a, int x);
 
+/**
+ * binary_to_uint -  converts a binary number to an unsigned int
+ * @b: the string with the binary representation
+ *
+ * Return: The value
+ */
 unsigned int binary_to_uint(const char *b)
 {
-
-	int rem;
-	int i;
-	int bin_dec = 0;
-	int base = 1;
-	int bin_num = 0;
+unsigned int ret = 0, len = 0, exp = 0;
 
 	if (b == NULL)
-	{
 		return (0);
-	}
 
-	else
-	for (i = 0; b[i] != '\0'; i++)
+	while (*(b + len) != '\0')
 	{
-		if (b[i] != '0' && b[i] != '1')
-		{
+		if (*(b + len) < '0' || *(b + len) > '1')
 			return (0);
-		}
-		bin_num = (bin_num * 10) + (b[i] - '0');
+		len++;
 	}
+	while (len > 0)
+	{
+		len--;
+		ret =  ret + (_pow(2, exp) *  (*(b + len) - 48));
+		exp++;
+	}
+	return (ret);
+}
 
-		for (i = 0; bin_num != 0; i++)
-		{
-		rem = bin_num % 10;
-		bin_dec = bin_dec + rem * base;
+/**
+ * _pow -  Power of a num to exponent
+ * @a:  base
+ * @x: exponent
+ * Return: The value
+ */
+int _pow(int a, int x)
+{
+int k, r = a;
 
-		bin_num /= 10;
-		base *= 2;
-		}
+	if (x == 0)
+		return (1);
 
-	return (bin_dec);
+	for (k = 1; k < x; i++)
+		r = r * a;
 
-
+	return (r);
 }
